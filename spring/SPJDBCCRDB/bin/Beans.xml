@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<context:annotation-config/>
+<tx:annotation-driven transation-manager="txManager"/>
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+  <property name="driverClassName" value="com.mysql.jdbc.Driver"/>  
+  <property name="url" value="jdbc:mysql://localhost:3306/umapath"/> 
+  <property name="username" value="root"/> 
+  <property name="password" value="nikhil123"/>
+ </bean>
+  
+<bean id="simplejdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate"
+ autowire="constructor"/>  
+  
+<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+autowire="constructor"/>
+  
+<bean id="accountDAO" class="umapath.net.AccountDAOImpl"/>
+<bean id="accountservice" class="umapath.net.accountServiceImp"/>
+
+</beans>  
+
+
+

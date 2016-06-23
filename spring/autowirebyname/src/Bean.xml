@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	
+	
+	 <bean id="id1" class="net.umapath.Categories" autowire="byName">
+		<property name="name" value="General Books" />
+	</bean>
+	 
+	 <bean id="bk" class="net.umapath.Book">
+		<property name="bookname" value="The Kids" />
+		<property name="bookprice" value="300" />
+	</bean>
+	 
+	 
+<!-- <bean id="id1" class="net.umapath.Categories" autowire="byType">
+		<property name="name" value="General Books" />
+	</bean>
+	 
+	 <bean id="abc" class="net.umapath.Book">
+		<property name="bookname" value="Java Book" />
+		<property name="bookprice" value="900" />
+	</bean> 
+	 -->
+	 
+	<!-- <bean id="id1" class="net.umapath.Categories" autowire="constructor">
+		<property name="name" value="General Books" />
+	</bean>
+	  <bean id="something" class="net.umapath.Book">
+		<property name="bookname" value="Java Book" />
+		<property name="bookprice" value="600" />
+	</bean> 
+	
+		 -->
+	
+	<!--  <bean id="id1" class="net.umapath.Categories" autowire="default">
+		<property name="name" value="General Books" />
+	</bean>
+	 
+	 <bean id="bk1" class="net.umapath.Book">
+		<property name="bookname" value="Java Book" />
+		<property name="bookprice" value="900" />
+	</bean> -->
+	
+</beans>

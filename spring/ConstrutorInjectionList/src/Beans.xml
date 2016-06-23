@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+ http://www.springframework.org/schema/context 
+ http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
+  
+  
+  
+<bean id="e1" class="umapath.net.Employee">  
+<constructor-arg value="12" type="int"/>  
+<constructor-arg value="Divya"></constructor-arg>    
+<constructor-arg value="1000" type="int"></constructor-arg>
+</bean>  
+
+<bean id="e2" class="umapath.net.Employee">  
+<constructor-arg value="13" type="int"/>  
+<constructor-arg value="Ann"></constructor-arg>    
+<constructor-arg value="2000" type="int"></constructor-arg>
+</bean>  
+
+<bean id="e3" class="umapath.net.Employee">  
+<constructor-arg value="14" type="int"/>  
+<constructor-arg value="Ajil"></constructor-arg>    
+<constructor-arg value="4000" type="int"></constructor-arg>
+</bean>  
+
+<bean id="e" class="umapath.net.Address">  
+<constructor-arg value="Bangalore"></constructor-arg>  
+<constructor-arg value="Karnataka"></constructor-arg>  
+<constructor-arg value="India"></constructor-arg>  
+<constructor-arg name="employees" >
+<list>
+<ref bean="e1"/>
+<ref bean="e2"/>
+<ref bean="e3"/>
+</list>
+</constructor-arg>
+</bean>  
+
+  
+</beans>  

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="welcome" class="umapath.net.Welcome"> 
+	<property name="x" value="welcome x"/> 
+	<property name="y" value="welcome y"/> 
+	
+</bean> 
+
+<bean id="hello" class="umapath.net.Hello" parent="welcome"> 
+	<property name="x1" value="hello x"/> 
+	<property name="y1" value="hello y"/> 
+	
+</bean>
+
+
+</beans>
